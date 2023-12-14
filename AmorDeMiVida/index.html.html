@@ -1,0 +1,136 @@
+;
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para el amor de mi vida</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #ffcccc, #ffd699);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: linear-gradient(45deg, #ff9999, #ffcc66);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .rose-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .rose-img img {
+            width: 100%;
+            height: auto;
+            max-height: 300px; /* Ajusta la altura máxima según tus preferencias */
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .shine {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: blink 2s infinite;
+        }
+
+        .shine1 {
+            top: 20px;
+            left: 20px;
+        }
+
+        .shine2 {
+            top: 40px;
+            left: 80px;
+        }
+
+        .shine3 {
+            top: 120px;
+            left: 40px;
+        }
+
+        .shine4 {
+            top: 160px;
+            left: 120px;
+        }
+
+        .message {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: linear-gradient(45deg, #ff4d4d, #ff1a1a);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #e60000, #cc0000);
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rose-img" onmouseover="changeColor()" onmouseout="resetColor()">
+            <img src="img/mor.jpg" alt="Rosa de Amor">
+            <div class="shine shine1"></div>
+            <div class="shine shine2"></div>
+            <div class="shine shine3"></div>
+            <div class="shine shine4"></div>
+        </div>
+        <p class="message">Te amo mi moy</p>
+        <a href="carta_amor.html" class="btn" target="_blank">¡Más Amor!</a>
+    </div>
+
+    <script>
+        function changeColor() {
+            document.querySelector('.rose-img').style.transform = 'scale(1.1)';
+            document.querySelector('.rose-img img').style.filter = 'brightness(120%)';
+        }
+
+        function resetColor() {
+            document.querySelector('.rose-img').style.transform = 'scale(1)';
+            document.querySelector('.rose-img img').style.filter = 'brightness(100%)';
+        }
+    </script>
+</body>
+</html>
